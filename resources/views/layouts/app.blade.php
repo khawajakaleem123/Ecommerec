@@ -12,12 +12,13 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
     @livewireStyles
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources//app.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 </head>
 <body>
     <div id="app">
@@ -83,5 +84,37 @@
         </main>
         @livewireScripts
     </div>
+    <script>
+        $(document).ready(function () {
+        $('#toggleLoginPassword').click(function () {
+            const passwordInput = $('#password');
+            const type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
+            passwordInput.attr('type', type);
+            
+            const eyeIcon = $('#togglePassword');
+            const iconClass = type === 'password' ? 'fa-eye' : 'fa-eye-slash';
+            eyeIcon.removeClass().addClass('fa ' + iconClass);
+        });
+        $('#toggleRegisterPassword').click(function () {
+            
+            const passwordInput = $('#reg_password');
+            const type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
+            passwordInput.attr('type', type);
+            
+            const eyeIcon = $('#togglePassword');
+            const iconClass = type === 'password' ? 'fa-eye' : 'fa-eye-slash';
+            eyeIcon.removeClass().addClass('fa ' + iconClass);
+        });
+        $('#toggleConfirmPassword').click(function () {
+            const passwordInput = $('#password_confirmation');
+            const type = passwordInput.attr('type') === 'password' ? 'text' : 'password';
+            passwordInput.attr('type', type);
+            
+            const eyeIcon = $('#togglePassword');
+            const iconClass = type === 'password' ? 'fa-eye' : 'fa-eye-slash';
+            eyeIcon.removeClass().addClass('fa ' + iconClass);
+        });
+    });
+        </script>
 </body>
 </html>

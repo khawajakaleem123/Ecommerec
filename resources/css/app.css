@@ -3,3 +3,40 @@
     font-size: 16px;
     font-weight: 600;
 }
+.login-register
+{
+    font-weight:700;
+}
+.email
+{
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    color:orange;
+}
+.login_lock
+{
+    position: absolute;
+    left: 6px;
+    top: 12px;
+    color:orange;
+}
+.fa-eye-slash
+{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    color: orange;
+}
+.log-btn
+{
+    background-color:orange;
+    color:#fff;
+    border-radius:20px;
+}
+
+
+
+
+
